@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e010521-8711-4bb3-9add-b522bfa25535" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/NinjaBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/PowerBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RobotCombat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../COMP2396B_2122_Assignment1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../code.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../tutorial 1/.idea/.gitignore" beforeDir="false" />
