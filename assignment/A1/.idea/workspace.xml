@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e010521-8711-4bb3-9add-b522bfa25535" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/TestRobot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/A1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/NinjaBot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/PowerBot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/RobotCombat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PowerBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PowerBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../COMP2396B_2122_Assignment1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../code.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../tutorial 1/.idea/.gitignore" beforeDir="false" />
@@ -89,6 +100,13 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../lecture notes/junit-4.12.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.RobotCombat">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">

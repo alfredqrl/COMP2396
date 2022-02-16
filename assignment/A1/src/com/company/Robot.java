@@ -1,6 +1,13 @@
 package com.company;
 
+/**
+ * This class is for the main robot class
+ *
+ * @author Qian Ruiling
+ * @version 1.1
+ */
 public class Robot {
+
     String name;
     int power;
     int lifeIndex;
