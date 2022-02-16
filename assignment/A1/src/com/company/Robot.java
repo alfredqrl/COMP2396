@@ -8,7 +8,7 @@ package com.company;
  */
 public class Robot {
 
-    String name;
+    String name;//
     int power;
     int lifeIndex;
 
