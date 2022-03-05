@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e010521-8711-4bb3-9add-b522bfa25535" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/TestRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2e010521-8711-4bb3-9add-b522bfa25535" name="Default Changelist" comment="finished assignment 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/A1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/NinjaBot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/PowerBot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/Robot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/RobotCombat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/PowerBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PowerBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../COMP2396B_2122_Assignment1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../code.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tutorial 1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/NinjaBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1/com/company/NinjaBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/PowerBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1/com/company/PowerBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A1/com/company/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1/com/company/Robot.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +132,14 @@
       <option name="presentableId" value="Default" />
       <updated>1644560802667</updated>
     </task>
+    <task id="LOCAL-00001" summary="finished assignment 1">
+      <created>1644999291054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644999291054</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,5 +153,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finished assignment 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished assignment 1" />
   </component>
 </project>
