@@ -12,4 +12,19 @@ public class Product {
     }
 
     /* You may add other properties and methods */
+    public void sold(){
+        this.quantity = this.quantity - 1;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
 }
