@@ -126,27 +126,31 @@ public class Game {
                 resetChangeTimes();
                 Collections.shuffle(cardDeck);
                 compare.clear();
-                setMoney(txt_inputbet.getText(), 0);
-                if (getMoney() < 0){
-                    JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
-                    System.exit(0);
+                if (txt_inputbet.getText().equals("")){
+                    JOptionPane.showMessageDialog(null, "You need at least bet $1");
+                }else{
+                    setMoney(txt_inputbet.getText(), 0);
+                    if (getMoney() < 0){
+                        JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
+                        System.exit(0);
+                    }
+                    label_info.setText("Your current bet is $" + txt_inputbet.getText());
+                    label_money.setText("Amount money you have is $" + getMoney());
+                    compare.add(cardDeck.get(3));
+                    compare.add(cardDeck.get(4));
+                    compare.add(cardDeck.get(5));
+                    //System.out.println(compare);
+                    label_Image1.setIcon(card_back);
+                    label_Image2.setIcon(card_back);
+                    label_Image3.setIcon(card_back);
+                    label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(3) + ".gif"));
+                    label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(4) + ".gif"));
+                    label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(5) + ".gif"));
+                    btn_rpcard1.setEnabled(true);
+                    btn_rpcard2.setEnabled(true);
+                    btn_rpcard3.setEnabled(true);
+                    btn_result.setEnabled(true);
                 }
-                label_info.setText("Your current bet is $" + txt_inputbet.getText());
-                label_money.setText("Amount money you have is $" + getMoney());
-                compare.add(cardDeck.get(3));
-                compare.add(cardDeck.get(4));
-                compare.add(cardDeck.get(5));
-                //System.out.println(compare);
-                label_Image1.setIcon(card_back);
-                label_Image2.setIcon(card_back);
-                label_Image3.setIcon(card_back);
-                label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(3) + ".gif"));
-                label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(4) + ".gif"));
-                label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(5) + ".gif"));
-                btn_rpcard1.setEnabled(true);
-                btn_rpcard2.setEnabled(true);
-                btn_rpcard3.setEnabled(true);
-                btn_result.setEnabled(true);
             }
         });
 
