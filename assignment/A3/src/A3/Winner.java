@@ -23,10 +23,19 @@ public class Winner {
         return this.winner;
     }
 
+    /**
+     *
+     * @param win
+     */
     public void setWinner(String win){
         this.winner = win;
     }
 
+    /**
+     *
+     * @param compare
+     * @return
+     */
     public String checkSpecialCards(ArrayList<String> compare){
         int counterPlayer = 0;
         int counterDealer = 0;
@@ -65,6 +74,11 @@ public class Winner {
         }
     }
 
+    /**
+     *
+     * @param compare
+     * @return
+     */
     public String checkFaceVal(ArrayList<String> compare){
         int facePlayer = 0;
         int faceDealer = 0;
