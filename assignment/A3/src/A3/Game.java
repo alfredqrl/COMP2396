@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import static java.lang.System.*;
+
 
 public class Game {
     private int money = 100;
@@ -120,104 +120,94 @@ public class Game {
 
         quit.addActionListener(e -> System.exit(0));
 
-        btn_start.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                resetChangeTimes();
-                Collections.shuffle(cardDeck);
-                compare.clear();
-                if (txt_inputbet.getText().equals("")){
-                    JOptionPane.showMessageDialog(null, "You need at least bet $1");
-                }else{
-                    setMoney(txt_inputbet.getText(), 0);
-                    if (getMoney() < 0){
-                        JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
-                        System.exit(0);
-                    }
-                    label_info.setText("Your current bet is $" + txt_inputbet.getText());
-                    label_money.setText("Amount money you have is $" + getMoney());
-                    compare.add(cardDeck.get(3));
-                    compare.add(cardDeck.get(4));
-                    compare.add(cardDeck.get(5));
-                    //System.out.println(compare);
-                    label_Image1.setIcon(card_back);
-                    label_Image2.setIcon(card_back);
-                    label_Image3.setIcon(card_back);
-                    label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(3) + ".gif"));
-                    label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(4) + ".gif"));
-                    label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(5) + ".gif"));
-                    btn_rpcard1.setEnabled(true);
-                    btn_rpcard2.setEnabled(true);
-                    btn_rpcard3.setEnabled(true);
-                    btn_result.setEnabled(true);
+        btn_start.addActionListener(e -> {
+            resetChangeTimes();
+            Collections.shuffle(cardDeck);
+            compare.clear();
+            if (txt_inputbet.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "You need at least bet $1");
+            }else{
+                setMoney(txt_inputbet.getText(), 0);
+                if (getMoney() < 0){
+                    JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
+                    System.exit(0);
                 }
-            }
-        });
-
-        btn_rpcard1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                incrementChangeTimes();
-                if (getChangeTimes() < 2){
-                    compare.set(0, cardDeck.get(6));
-                    label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(6) + ".gif"));
-                    btn_rpcard1.setEnabled(false);
-                }else{
-                    btn_rpcard1.setEnabled(false);
-                    JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
-                }
-            }
-        });
-
-        btn_rpcard2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                incrementChangeTimes();
-                if (getChangeTimes() <= 2){
-                    compare.set(1, cardDeck.get(7));
-                    label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(7) + ".gif"));
-                    btn_rpcard2.setEnabled(false);
-                }else{
-                    btn_rpcard2.setEnabled(false);
-                    JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
-                }
-            }
-        });
-
-        btn_rpcard3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                incrementChangeTimes();
-                if (getChangeTimes() <= 2){
-                    compare.set(2, cardDeck.get(8));
-                    label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(8) + ".gif"));
-                    btn_rpcard3.setEnabled(false);
-                }else{
-                    btn_rpcard3.setEnabled(false);
-                    JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
-                }
-            }
-        });
-
-        btn_result.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                compare.add(cardDeck.get(0));
-                compare.add(cardDeck.get(1));
-                compare.add(cardDeck.get(2));
+                label_info.setText("Your current bet is $" + txt_inputbet.getText());
+                label_money.setText("Amount money you have is $" + getMoney());
+                compare.add(cardDeck.get(3));
+                compare.add(cardDeck.get(4));
+                compare.add(cardDeck.get(5));
                 //System.out.println(compare);
-                label_Image1.setIcon(new ImageIcon("images/"+ cardDeck.get(0) + ".gif"));
-                label_Image2.setIcon(new ImageIcon("images/"+ cardDeck.get(1) + ".gif"));
-                label_Image3.setIcon(new ImageIcon("images/"+ cardDeck.get(2) + ".gif"));
-                Winner win = new Winner();
-                String winner = win.getWinner(compare);
-                if (winner.equals("Dealer")){
-                    JOptionPane.showMessageDialog(null, "Sorry! The Dealer wins this round!");
-                }else{
-                    JOptionPane.showMessageDialog(null, "Congratulations! You win this round!");
-                    setMoney(String.valueOf(getMoney() * 2),1);
-                }
+                label_Image1.setIcon(card_back);
+                label_Image2.setIcon(card_back);
+                label_Image3.setIcon(card_back);
+                label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(3) + ".gif"));
+                label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(4) + ".gif"));
+                label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(5) + ".gif"));
+                btn_rpcard1.setEnabled(true);
+                btn_rpcard2.setEnabled(true);
+                btn_rpcard3.setEnabled(true);
+                btn_result.setEnabled(true);
             }
+        });
+
+        btn_rpcard1.addActionListener(e -> {
+            incrementChangeTimes();
+            System.out.println(getChangeTimes());
+            if (getChangeTimes() <= 2){
+                compare.set(0, cardDeck.get(6));
+                label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(6) + ".gif"));
+                btn_rpcard1.setEnabled(false);
+            }else{
+                btn_rpcard1.setEnabled(false);
+                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+            }
+        });
+
+        btn_rpcard2.addActionListener(e -> {
+            incrementChangeTimes();
+            System.out.println(getChangeTimes());
+            if (getChangeTimes() <= 2){
+                compare.set(1, cardDeck.get(7));
+                label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(7) + ".gif"));
+                btn_rpcard2.setEnabled(false);
+            }else{
+                btn_rpcard2.setEnabled(false);
+                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+            }
+        });
+
+        btn_rpcard3.addActionListener(e -> {
+            incrementChangeTimes();
+            System.out.println(getChangeTimes());
+            if (getChangeTimes() <= 2){
+                compare.set(2, cardDeck.get(8));
+                label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(8) + ".gif"));
+                btn_rpcard3.setEnabled(false);
+            }else{
+                btn_rpcard3.setEnabled(false);
+                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+            }
+        });
+
+        btn_result.addActionListener(e -> {
+            compare.add(cardDeck.get(0));
+            compare.add(cardDeck.get(1));
+            compare.add(cardDeck.get(2));
+            //System.out.println(compare);
+            label_Image1.setIcon(new ImageIcon("images/"+ cardDeck.get(0) + ".gif"));
+            label_Image2.setIcon(new ImageIcon("images/"+ cardDeck.get(1) + ".gif"));
+            label_Image3.setIcon(new ImageIcon("images/"+ cardDeck.get(2) + ".gif"));
+            Winner win = new Winner();
+            String winner = win.getWinner(compare);
+            if (winner.equals("dealer")){
+                JOptionPane.showMessageDialog(null, "Sorry! The Dealer wins this round!");
+            }else if (winner.equals("player")){
+                JOptionPane.showMessageDialog(null, "Congratulations! You win this round!");
+                setMoney(String.valueOf(Integer.parseInt(txt_inputbet.getText()) * 2),1);
+                label_money.setText("Amount money you have is $" + getMoney());
+            }
+            resetChangeTimes();
         });
     }
 
