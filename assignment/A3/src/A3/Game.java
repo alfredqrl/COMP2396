@@ -8,7 +8,12 @@ import java.util.Arrays;
 import java.util.Collections;
 
 
-
+/**
+ * This class is the demonstrate the main game
+ *
+ * @author Qian Ruiling
+ * @version 3.0
+ */
 public class Game {
     private int money = 100;
     private int bet = 0;
@@ -52,6 +57,9 @@ public class Game {
     ImageIcon image5 = card_back;
     ImageIcon image6 = card_back;
 
+    /**
+     * This method start the GUI of this game
+     */
     public void go(){
         ArrayList<String> compare = new ArrayList<String>();
 
@@ -126,12 +134,10 @@ public class Game {
             compare.clear();
             if (txt_inputbet.getText().equals("")){
                 JOptionPane.showMessageDialog(null, "You need at least bet $1");
+            }else if (Integer.parseInt(txt_inputbet.getText()) > getMoney()){
+                JOptionPane.showMessageDialog(null, "You do not have enough money!");
             }else{
                 setMoney(txt_inputbet.getText(), 0);
-                if (getMoney() < 0){
-                    JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
-                    System.exit(0);
-                }
                 label_info.setText("Your current bet is $" + txt_inputbet.getText());
                 label_money.setText("Amount money you have is $" + getMoney());
                 compare.add(cardDeck.get(3));
@@ -148,12 +154,13 @@ public class Game {
                 btn_rpcard2.setEnabled(true);
                 btn_rpcard3.setEnabled(true);
                 btn_result.setEnabled(true);
+                btn_start.setEnabled(false);
             }
         });
 
         btn_rpcard1.addActionListener(e -> {
             incrementChangeTimes();
-            System.out.println(getChangeTimes());
+            //System.out.println(getChangeTimes());
             if (getChangeTimes() <= 2){
                 compare.set(0, cardDeck.get(6));
                 label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(6) + ".gif"));
@@ -166,7 +173,7 @@ public class Game {
 
         btn_rpcard2.addActionListener(e -> {
             incrementChangeTimes();
-            System.out.println(getChangeTimes());
+            //System.out.println(getChangeTimes());
             if (getChangeTimes() <= 2){
                 compare.set(1, cardDeck.get(7));
                 label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(7) + ".gif"));
@@ -179,7 +186,7 @@ public class Game {
 
         btn_rpcard3.addActionListener(e -> {
             incrementChangeTimes();
-            System.out.println(getChangeTimes());
+            //System.out.println(getChangeTimes());
             if (getChangeTimes() <= 2){
                 compare.set(2, cardDeck.get(8));
                 label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(8) + ".gif"));
@@ -207,14 +214,37 @@ public class Game {
                 setMoney(String.valueOf(Integer.parseInt(txt_inputbet.getText()) * 2),1);
                 label_money.setText("Amount money you have is $" + getMoney());
             }
+            btn_result.setEnabled(false);
+            btn_start.setEnabled(true);
             resetChangeTimes();
+            if (getMoney() <= 0){
+                btn_rpcard1.setEnabled(false);
+                btn_rpcard2.setEnabled(false);
+                btn_rpcard3.setEnabled(false);
+                btn_result.setEnabled(false);
+                btn_start.setEnabled(false);
+                label_info.setText("Your have no money!");
+                label_money.setText("Please start a new game!");
+                JOptionPane.showMessageDialog(null, "Game over!\nYou have no more money!\nPlease start a new game");
+            }
         });
     }
 
+    /**
+     * This method will return the current number of money the player have
+     *
+     * @return The current number of money the player have
+     */
     public int getMoney(){
         return this.money;
     }
 
+    /**
+     * This method will set the money after each round
+     *
+     * @param money How many money change
+     * @param status 0 for minus, 1 for plus
+     */
     public void setMoney(String money, int status){
         if (status == 0){
             this.money = this.money - Integer.parseInt(money);
@@ -223,14 +253,25 @@ public class Game {
         }
     }
 
+    /**
+     * This method will reset the times of changing cards
+     */
     public void resetChangeTimes(){
         this.changeTimes = 0;
     }
 
+    /**
+     * This method will increment the times of changing cards by one
+     */
     public void incrementChangeTimes(){
         this.changeTimes = this.changeTimes + 1;
     }
 
+    /**
+     * This method will return the times of changing cards by one
+     *
+     * @return Times of changing cards
+     */
     public int getChangeTimes(){
         return this.changeTimes;
     }

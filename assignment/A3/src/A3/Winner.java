@@ -2,9 +2,21 @@ package A3;
 
 import java.util.ArrayList;
 
+/**
+ * This class demonstrates who win in one round
+ *
+ * @author Qian Ruiling
+ * @version 3.0
+ */
 public class Winner {
     private String winner;
 
+    /**
+     * This method will calculate and return the winner to the Game class
+     *
+     * @param compare The cards received by player and dealer
+     * @return Who win in this round
+     */
     public String getWinner(ArrayList<String> compare){
         //System.out.println(compare);
         // 0,1,2: player
@@ -24,17 +36,19 @@ public class Winner {
     }
 
     /**
+     * This method will set the winner for returning
      *
-     * @param win
+     * @param win winner in this round
      */
     public void setWinner(String win){
         this.winner = win;
     }
 
     /**
+     * This method will perform rule 1 to determine the winner
      *
-     * @param compare
-     * @return
+     * @param compare The cards received by player and dealer
+     * @return Who win determined by rule 1
      */
     public String checkSpecialCards(ArrayList<String> compare){
         int counterPlayer = 0;
@@ -75,9 +89,10 @@ public class Winner {
     }
 
     /**
+     * This method will perform rule 2 to determine the winner
      *
-     * @param compare
-     * @return
+     * @param compare The cards received by player and dealer
+     * @return Who win determined by rule 2
      */
     public String checkFaceVal(ArrayList<String> compare){
         int facePlayer = 0;
@@ -98,16 +113,17 @@ public class Winner {
         if (Integer.parseInt(d3) <= 10){
             faceDealer = faceDealer + Integer.parseInt(d3);
         }
-        if (Integer.parseInt(d1) <= 10){
+        if (Integer.parseInt(p1) <= 10){
             facePlayer = facePlayer + Integer.parseInt(p1);
         }
-        if (Integer.parseInt(d1) <= 10){
+        if (Integer.parseInt(p2) <= 10){
             facePlayer = facePlayer + Integer.parseInt(p2);
         }
-        if (Integer.parseInt(d1) <= 10){
+        if (Integer.parseInt(p3) <= 10){
             facePlayer = facePlayer + Integer.parseInt(p3);
         }
-
+        System.out.println(faceDealer);
+        System.out.println(facePlayer);
         faceDealer = faceDealer % 10;
         facePlayer = facePlayer % 10;
 
