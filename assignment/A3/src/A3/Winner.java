@@ -95,6 +95,7 @@ public class Winner {
      * @return Who win determined by rule 2
      */
     public String checkFaceVal(ArrayList<String> compare){
+        System.out.println();
         int facePlayer = 0;
         int faceDealer = 0;
         String d1 = compare.get(3).substring(6);
@@ -122,14 +123,19 @@ public class Winner {
         if (Integer.parseInt(p3) <= 10){
             facePlayer = facePlayer + Integer.parseInt(p3);
         }
-        System.out.println(faceDealer);
-        System.out.println(facePlayer);
+        //System.out.println(faceDealer);
+        //System.out.println(facePlayer);
         faceDealer = faceDealer % 10;
         facePlayer = facePlayer % 10;
 
+        //System.out.println("Final dealer: " + faceDealer);
+        //System.out.println("Final player: " + facePlayer);
+
         if (facePlayer > faceDealer){
+            //System.out.println("player");
             return "player";
         }else{
+            //System.out.println("dealer");
             return "dealer";
         }
     }

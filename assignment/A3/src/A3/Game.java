@@ -161,39 +161,50 @@ public class Game {
         btn_rpcard1.addActionListener(e -> {
             incrementChangeTimes();
             //System.out.println(getChangeTimes());
-            if (getChangeTimes() <= 2){
+            if (getChangeTimes() < 2){
                 compare.set(0, cardDeck.get(6));
                 label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(6) + ".gif"));
                 btn_rpcard1.setEnabled(false);
-            }else{
+            }else if (getChangeTimes() == 2){
+                //btn_rpcard1.setEnabled(false);
+                //JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+                compare.set(0, cardDeck.get(6));
+                label_Image4.setIcon(new ImageIcon("images/"+ cardDeck.get(6) + ".gif"));
                 btn_rpcard1.setEnabled(false);
-                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+                btn_rpcard2.setEnabled(false);
+                btn_rpcard3.setEnabled(false);
             }
         });
 
         btn_rpcard2.addActionListener(e -> {
             incrementChangeTimes();
             //System.out.println(getChangeTimes());
-            if (getChangeTimes() <= 2){
+            if (getChangeTimes() < 2){
                 compare.set(1, cardDeck.get(7));
                 label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(7) + ".gif"));
                 btn_rpcard2.setEnabled(false);
-            }else{
+            }else if (getChangeTimes() == 2){
+                compare.set(1, cardDeck.get(7));
+                label_Image5.setIcon(new ImageIcon("images/"+ cardDeck.get(7) + ".gif"));
+                btn_rpcard1.setEnabled(false);
                 btn_rpcard2.setEnabled(false);
-                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
+                btn_rpcard3.setEnabled(false);
             }
         });
 
         btn_rpcard3.addActionListener(e -> {
             incrementChangeTimes();
             //System.out.println(getChangeTimes());
-            if (getChangeTimes() <= 2){
+            if (getChangeTimes() < 2){
                 compare.set(2, cardDeck.get(8));
                 label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(8) + ".gif"));
                 btn_rpcard3.setEnabled(false);
-            }else{
+            }else if (getChangeTimes() == 2){
+                compare.set(2, cardDeck.get(8));
+                label_Image6.setIcon(new ImageIcon("images/"+ cardDeck.get(8) + ".gif"));
+                btn_rpcard1.setEnabled(false);
+                btn_rpcard2.setEnabled(false);
                 btn_rpcard3.setEnabled(false);
-                JOptionPane.showMessageDialog(null, "Sorry!\nYou can only replace twice!");
             }
         });
 
