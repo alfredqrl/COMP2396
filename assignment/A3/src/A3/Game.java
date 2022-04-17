@@ -59,6 +59,8 @@ public class Game {
 
     /**
      * This method start the GUI of this game
+     *
+     * @param Nil
      */
     public void go(){
         ArrayList<String> compare = new ArrayList<String>();
@@ -266,6 +268,8 @@ public class Game {
 
     /**
      * This method will reset the times of changing cards
+     *
+     * @param Nil
      */
     public void resetChangeTimes(){
         this.changeTimes = 0;
@@ -273,6 +277,8 @@ public class Game {
 
     /**
      * This method will increment the times of changing cards by one
+     *
+     * @param Nil
      */
     public void incrementChangeTimes(){
         this.changeTimes = this.changeTimes + 1;
