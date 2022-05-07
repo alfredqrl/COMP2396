@@ -1,4 +1,4 @@
-package A4;
+
 
 /**
  * This class will determine the result of the game

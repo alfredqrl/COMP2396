@@ -1,4 +1,4 @@
-package A4;
+
 
 /**
  * This class provide txt output or input for Server and Client
